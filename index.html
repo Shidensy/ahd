@@ -1,5 +1,5 @@
 <!DOCTYPE html> 
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,8 +8,21 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <script src="https://kit.fontawesome.com/5a0a00bee3.js" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.slim.min.js" integrity="sha512-5NqgLBAYtvRsyAzAvEBWhaW+NoB+vARl6QiA02AFMhCWvPpi7RWResDcTGYvQtzsHVCfiUhwvsijP+3ixUk1xw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+        <link rel="mask-icon" href="assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <meta name="description" content="experience">
+
         <title>ActiveBox</title>
     </head>
 
@@ -21,16 +34,16 @@
                     <div class="header_logo">
                         <img src="assets/img/header/ActiveBoxlogo.png" alt="">
                     </div>
-                    <nav class="nav">
-                        <a class="nav_link" href="#">Features</a>
-                        <a class="nav_link" href="#">Works</a>
-                        <a class="nav_link" href="#">Our Team</a>
-                        <a class="nav_link" href="#">Testimonials</a>
-                        <a class="nav_link" href="#">Download</a>
+                    <nav class="nav" id="nav">
+                        <a class="nav_link" href="#" data-scroll="#features">Features</a>
+                        <a class="nav_link" href="#" data-scroll="#works">Works</a>
+                        <a class="nav_link" href="#" data-scroll="#team">Our Team</a>
+                        <a class="nav_link" href="#" data-scroll="#testimonials">Testimonials</a>
+                        <a class="nav_link" href="#" data-scroll="#download">Download</a>
                     </nav>
 
-                    <button class="burger">
-                        <span class="burger_item">Menu</span>
+                    <button class="burger active" type="button" id="navToggle">
+                        <span class="burger_item active" id="burgerItem">Menu</span>
                     </button>
                 </div> <!-- header__inner-->
             </div> <!-- container -->
@@ -50,7 +63,7 @@
         </div>
 
         <!-- Features -->
-        <div class="container">
+        <div class="container" id="features">
             <div class="features">
                 <div class="features_item">
                     <img class="features_icon" src="assets/img/features/1.png" alt="">
@@ -103,7 +116,7 @@
         </div>  <!-- container -->   
         
         <!-- Works -->
-        <div class="works">
+        <div class="works" id="works">
             <div class="works_item">
                 <img class="works_img" src="assets/img/work/work1.jpg" alt="">
                 <div class="works_content">
@@ -170,7 +183,7 @@
         </div> <!-- Works -->
 
         <!-- Team -->
-        <div class="team">
+        <div class="team" id="team">
             <div class="container">
                 <div class="team_inner">
                     <div class="team_item">
@@ -225,22 +238,38 @@
         </div> <!-- Team -->
 
         <!-- Testimonials -->
-        <div class="testimonials">
+        <div class="testimonials" id="testimonials">
             <div class="container">
-                <div class="testimonials_item">
-                    <div class="testimonials_photo">
-                        <img class="testimonials_img" src="assets/img/testimonials/review1.jpg" alt="">
+                <div  class="testimonials_slider" id="testimonialsSlider"> 
+                    <div class="slick_item">
+                        <div class="testimonials_item">
+                            <div class="testimonials_photo">
+                                <img class="testimonials_img" src="assets/img/testimonials/review1.jpg" alt="">
+                            </div>
+                            <div class="testimonials_content">
+                                <div class="testimonials_text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</div>
+                                <div class="testimonials_author">Susan Sims, Interaction Designer at XYZ</div>
+                            </div>
+                        </div>    
                     </div>
-                    <div class="testimonials_content">
-                        <div class="testimonials_text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</div>
-                        <div class="testimonials_author">Susan Sims, Interaction Designer at XYZ</div>
+
+                    <div class="slick_item">
+                        <div class="testimonials_item">
+                            <div class="testimonials_photo">
+                                <img class="testimonials_img" src="assets/img/testimonials/review1.jpg" alt="">
+                            </div>
+                            <div class="testimonials_content">
+                                <div class="testimonials_text">“Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.”</div>
+                                <div class="testimonials_author">Susan Sims, Interaction Designer at XYZ</div>
+                            </div>
+                        </div>    
                     </div>
                 </div>
             </div>
         </div> <!-- Testimonials -->
 
         <!-- Download -->
-        <div class="download">
+        <div class="download" id="download">
             <div class="container">
                 <div class="download_title">Are You Ready to Start? Download Now For Free!</div>
                 <div class="download_text"><p>dapibus, tellus ac cursus commodo</p></div>
@@ -290,5 +319,6 @@
 
         <!-- JS -->
         <script src="assets/app.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     </body> 
 </html>

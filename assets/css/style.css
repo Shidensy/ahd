@@ -137,6 +137,24 @@ a {
     bottom: -8px;
 }
 
+.burger.active {
+    margin-right: 0;
+}
+
+.burger.active .burger_item:before {
+    transform-origin: left top;
+    transform: rotate(45deg) translateX(-3px);
+}
+
+.burger.active .burger_item:after {
+    transform-origin: left bottom;
+    transform: rotate(-45deg) translateX(-3px);
+}
+
+.burger_item.active {
+    background: none;
+}
+
 /* Intro */
 
 .intro {
@@ -407,6 +425,15 @@ a {
     background-color: #53354a;
 }
 
+.testimonials_slider {
+    height: 500px;
+    overflow: hidden;
+}
+
+.testimonials_slider .slick-initialized {
+    height: auto;
+}
+
 .testimonials_item {
     display: flex;
     flex-wrap: wrap;
@@ -449,6 +476,44 @@ a {
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 50%;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.slick-dots li {
+    margin: 0 5px;
+    padding-bottom: 10px;
+}
+
+.slick-dots button {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    border: 0;
+    padding: 0;
+    opacity: 0.5;
+    cursor: pointer;
+
+    font-size: 0;
+    color: transparent;
+}
+
+.slick-dots .slick-active button {
+    background-color: #fff;
+    opacity: 1;
 }
 
 /* Download */
@@ -559,6 +624,23 @@ a {
 
     .nav {
         display: none;
+        width: 100%;
+        flex-direction: column;
+
+        background-color: #31344e;
+        text-align: right;
+
+        position: absolute;
+        top: 100%;
+        right: 0;
+    }
+
+    .nav_link {
+        padding: 9px 15px;
+    }
+
+    .nav.show {
+        display: flex;
     }
 
     /* Burger */
@@ -647,6 +729,12 @@ a {
         text-align: center;
     }
 
+    /* Slider */
+
+    .slick-dots {   
+        padding-right: 155px;
+    }
+
     /* Intro */
 
     .intro {
@@ -667,7 +755,7 @@ a {
     /* Features */
 
     .features {
-        margin: 40px 0;
+        margin: 70px 0;
     }
 
     .features_item {
