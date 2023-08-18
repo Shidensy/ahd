@@ -495,6 +495,7 @@ a {
 .slick-dots li {
     margin: 0 5px;
     padding-bottom: 10px;
+    border: 0;
 }
 
 .slick-dots button {
